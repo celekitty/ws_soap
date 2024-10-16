@@ -1,5 +1,5 @@
 <?php
-include("function.inc.php");
+include("funciones.inc.php");
 try{
     $opciones = array(
         'location'=>'http://localhost/ws_soap/server.php',
@@ -7,7 +7,7 @@ try{
         'trace' => true
     );
 
-    $client = new SoapClient(null,$ocpiones);
+    $client = new SoapClient(null,$opciones);
     if(isset($_GET["idz"])){
         $idz= intval($_GET["idz"]);
         if($idz > 0){
